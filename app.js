@@ -48,10 +48,15 @@ const color = function (container) {
     }
     return [ 255, 0, 0, (11 - container.animation) * 0.08 ];
   } else {
+/*    if (container.Image.includes(image+':1.0')) {
++      return [ 51, 102, 153, 0.1 ];
++    } else if (container.Image.includes(image+':1.1')) {
++      return [ 255, 153, 0, 0.1 ];
+*/
     if (container.Image.includes(image+':1.1')) {
-      return [ 255, 255, 0, 0.1 ];
+      return [ 0, 0, 255, 0.1 ];
     } else if (container.Image.includes(image+':1.2')) {
-      return [ 0, 255, 255, 0.1 ];
+      return [ 255, 64, 0, 0.1 ];
     } else {
       return [ 255, 255, 255, 0.1 ];
     }
