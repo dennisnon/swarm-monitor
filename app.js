@@ -5,7 +5,7 @@ const monitor = require('node-docker-monitor');
 
 const leds = new Blinkt();
 
-const image = 'dennisn84/rpi-dockercoins_worker';
+const image = 'dennisn84/rpi-dockercoins';
 var containers = [];
 
 const shutdown = function () {
@@ -50,8 +50,10 @@ const color = function (container) {
   } else {
     if (container.Image.includes(image+':1.0')) {
       return [ 51, 102, 153, 0.1 ];
-    } else if (container.Image.includes(image+':1.1')) {
-      return [ 255, 153, 0, 0.1 ];
+    if (container.Image.includes(image+':1.1')) {
+      return [ 0, 0, 255, 0.1 ];
+    } else if (container.Image.includes(image+':1.2')) {
+      return [ 255, 64, 0, 0.1 ];
     } else {
       return [ 255, 255, 255, 0.1 ];
     }
